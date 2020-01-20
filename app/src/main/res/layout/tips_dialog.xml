@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tips_dialog_background"
+    android:paddingLeft="25sp"
+    android:paddingRight="25sp"
+    android:paddingTop="20sp">
+
+    <ImageView
+        android:id="@+id/imageView_tips"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tips_dialog_pic" />
+
+    <cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager
+        android:id="@+id/tips_pager"
+        android:layout_width="0dp"
+        android:layout_height="423dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_tips" />
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/tips_page_indicator"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tips_pager" />
+
+    <ImageView
+        android:id="@+id/close_button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tips_pager"
+        app:srcCompat="@drawable/close_icon" />
+
+</android.support.constraint.ConstraintLayout>
+

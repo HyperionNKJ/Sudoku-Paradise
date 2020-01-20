@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView_gameMode"
+        android:layout_width="384dp"
+        android:layout_height="198dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/game_mode" />
+
+    <ImageView
+        android:id="@+id/imageView_solverMode"
+        android:layout_width="384dp"
+        android:layout_height="198dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_gameMode"
+        app:srcCompat="@drawable/solver_mode" />
+
+    <ImageView
+        android:id="@+id/imageView_tutorial"
+        android:layout_width="192dp"
+        android:layout_height="86dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_tips"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_solverMode"
+        app:srcCompat="@drawable/tutorial1" />
+
+    <ImageView
+        android:id="@+id/imageView_tips"
+        android:layout_width="192dp"
+        android:layout_height="86dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView_tutorial"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_solverMode"
+        app:srcCompat="@drawable/tips" />
+
+    <ImageView
+        android:id="@+id/imageView_history"
+        android:layout_width="192dp"
+        android:layout_height="86dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/imageLogout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_tutorial"
+        app:srcCompat="@drawable/history" />
+
+    <ImageView
+        android:id="@+id/imageLogout"
+        android:layout_width="192dp"
+        android:layout_height="86dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView_history"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_tips"
+        app:srcCompat="@drawable/logout" />
+
+</android.support.constraint.ConstraintLayout>

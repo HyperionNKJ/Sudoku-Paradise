@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "874519409099",
+    "firebase_url": "https://sudoku-paradise.firebaseio.com",
+    "project_id": "sudoku-paradise",
+    "storage_bucket": "sudoku-paradise.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874519409099:android:a67d06d62cd90caf",
+        "android_client_info": {
+          "package_name": "com.example.user.sudokuparadise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874519409099-sm3vq8hqimd857g3i0u1eh63a8uvoosc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "TO BE ENTERED"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

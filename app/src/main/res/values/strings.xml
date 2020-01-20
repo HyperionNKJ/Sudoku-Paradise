@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">Sudoku Paradise</string>
+    <string-array name="level_of_difficulty">
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Hard</item>
+        <item>Master</item>
+    </string-array>
+    <string-array name="time_limit">
+        <item>5 min</item>
+        <item>10 min</item>
+        <item>20 min</item>
+        <item>30 min</item>
+        <item>45 min</item>
+        <item>1 hour</item>
+        <item>2 hour</item>
+    </string-array>
+    <string-array name="cell_options">
+        <item>""</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>None</item>
+        <item>Level</item>
+        <item>Timed Game</item>
+        <item>Time Limit</item>
+        <item>Time Taken</item>
+        <item>Date</item>
+        <item>Result</item>
+    </string-array>
+    <string name="message_inputError">Input Error! Please ensure there is no duplicate in the same row, column and 3x3 zone!</string>
+    <string name="message_solved">PUZZLE SOLVED!</string>
+    <string name="message_cannotBeSolved">There is no solution to this puzzle! Please reset.</string>
+    <string name="message_hint">Please select a cell to reveal its solution.</string>
+    <string name="tips1_open_single">Open single occurs when there is a row, column, or region that is missing only one digit (one empty cell). Simply identify the missing digit and place it in the empty cell.\n\nExample: The 3x3 region above is missing only one digit, “1”. Therefore “1” can be safely placed in the empty cell.</string>
+    <string name="tips2_naked_single">The candidate digits of an empty cell are determined by analyzing its row, column, and 3x3 region. Naked single occurs when it has only one single candidate digit. This candidate digit can be safely placed in the cell.\n\nExample: In the empty cell indicated above, we see that it cannot hold any digit from 1 to 9 except for “3”. It has only one candidate digit “3”. Therefore “3” can be safely placed in the cell.</string>
+    <string name="tips3_hidden_single">Within a row, column, or 3x3 region, hidden single occurs when a missing digit appears as candidate in only one of the empty cells. This empty cell will have multiple candidates, but the digit can be safely placed inside it.\n\nExample: In the row above, the missing digit “7” appears as candidate in only the 4th cell, out of every empty cell. This means that within the row, “7” can only be placed in that cell. Therefore, “7” can be safely placed inside it. </string>
+    <string name="tips4_region_cross_hatching">The Region-wise Cross Hatching technique involves focusing on a particular 3x3 region and a particular digit that is missing from that region. The player then evaluates every empty cell in the region to see if it is suitable for the missing digit to be placed there, by looking at its row and column. If there is only one possible empty cell that can hold the missing digit, we can safely place the digit in that cell.\n\nExample: Focusing on region 4 as bounded in blue, we identify the digit “2” to be missing. “2” cannot be placed in row 4, row 5 and even column 2. This leaves us with only 1 possible cell to place “2”.</string>
+    <string name="tips5_row_column_cross_hatching">The Row and Column-wise Cross Hatching technique involves focusing on a particular row/column and a particular digit that is missing from that row/column. The player then evaluates every empty cell in the row/column to see if it is suitable for the missing digit to be placed there. If there is only one possible empty cell that can hold the missing digit, we can safely place the digit in that cell.\n\nExample: Focusing on column 7 as bounded in blue, we identify the digit “4” to be missing. “4” cannot be placed in row 1, row 5 and row 7-9. This leaves us with only 1 possible cell to place “4”.</string>
+    <string name="tips6_naked_pair">A naked pair occurs when exactly two cells in a row, column, or region have only the same two candidates. These two candidates can be eliminated from the candidate list of all other empty cells in that row, column or region.\n\nExample: Since the two cells marked in red are the only two cells in their 3x3 region to have only the same two candidates “2” and “3”, they form a naked pair. This implies that “2” and “3” must be placed in these two cells (the order is uncertain though) and “2” and “3” can be removed from the candidate list of all other cells in that region. The removal is shown in blue. This reveals a naked single “1” in the bottom right corner cell.</string>
+    <string name="tips7_naked_triple">A naked triple occurs when three cells in a row, column, or region have some combination of the same three candidates. It is not a must for a cell in the naked triple to have all three candidates. These three candidates can be eliminated from the candidate list of all other empty cells in that row, column or region.\n\nExample: In row 1, the three cells marked in red all have only the same three candidates “1”, “5” and “9”.  As such, they form a naked triple which implies that “1”, “5” and “9” must be placed in these three cells (the order is uncertain though) and “1”, “5” and “9” can be removed from the candidate list of all other cells in that row. The removal is shown in blue.\nIn row 2, the three cells marked in red all have a combination of the same three candidates “5”, “6”, an “8” and hence form a naked triple. This implies that “5”, “6” and “8” must be placed in these three cells, allowing them to be removed from the candidate list of all other cells in that row. The removal is shown in blue.</string>
+    <string name="tips8_hidden_pair">A hidden pair occurs when a pair of candidate digits appears in only two empty cells in a row, column or 3x3 region. All other candidate digits can be eliminated from these two cells.\n\nExample: In the region above, the candidates “6” and “9” appear in only two empty cells marked in red. “6” and “9” thus form a hidden pair which implies they must be placed in these two cells (the order is uncertain though) and all other candidates in these two cells can be removed. The removal is shown in blue.</string>
+    <string name="tips9_hidden_triple">A hidden triple occurs when three candidate digits appear in only three empty cells in a row, column, or 3x3 region. It is not a must for a cell in the hidden triple to have all three candidates. All other candidate digits can be eliminated from these three cells.\n\nExample: In the region above, the candidates “2”, “6” and “8” appear in only three empty cells marked in red. “2”, “6” and “8” thus form a hidden triple and they are only possible in these three cells. This implies they must be placed in these three cells (the order is uncertain though) and all other candidates in these three cells can be removed. The removal is shown in blue.</string>
+    <string name="tips10_x_wing">An X-Wing occurs when two rows (column resp.) each contain exactly two cells that hold one particular candidate. These cells may contain multiple candidates. The two cells in the first row (column resp.) must lie in the same two columns (rows resp.) as the two cells in the second row (column resp.). It would help to imagine a rectangle cornered by the four cells. That particular candidate can then be removed from the candidate list of all other empty cells in the two columns (rows resp.)\n\nExample: In the grid above, row 2 and row 5 each contain exactly two cells that hold the candidate “4”. The cells are marked in red. The two cells in row 2 also lie in the same two columns as the two cells in row 5. In row 2, if “4” is placed on the left cell, then in row 5, “4” must be placed on the right cell.  Likewise, in row 2, if “4” is placed on the right cell, then in row 5, “4” must be placed on the left cell. In either case, “4” resides in two of the four cells marked in red, and they must be diagonally apart, ensuring that each column has a “4” in one of its two cells marked in red. Therefore, we can safely remove “4” from the candidate list of all other empty cells in the two columns. The removal is shown in blue.</string>
+    <string-array name="sudoku_puzzle_easy">
+        <item>940000000052000047310709000000670035068403720470015000000304082630000570000000014</item>
+        <item>020070100001040036349060800007690000800050003000038500005010792210080400006020010</item>
+        <item>693000000071904605004608000500463000000000000000129007000305400405802170000000593</item>
+        <item>760543001000000024830009000400057006005060900900320008000100075580000000200795083</item>
+        <item>000800040080000506640907203030419007000705000700368020104203078806000030070001000</item>
+        <item>001000070025006003304070609000653004540208031800417000902060305400300160060000200</item>
+        <item>600000347004709006300004192080040900000805000001090030215900003400106800869000001</item>
+        <item>002180000106090400308004001001430080980000072020079100200500804009020506000041200</item>
+        <item>970002000400071302010009408600010280007503100091040006209700010106390007000100064</item>
+        <item>800165009094020068700009000370002000020493050000700036000500004160080370400971002</item>
+    </string-array>
+    <string-array name="sudoku_puzzle_medium">
+        <item>046093000802450000000000010090007263200000005568300090020000000000064907000270350</item>
+        <item>620000509701000060005060743030006000009508300000900050216050400090000605807000031</item>
+        <item>100030070090150200260008010000300102000497000809002000070800021004029060080060007</item>
+        <item>903720000000000060071084000080005314300000002219400080000350420030000000000017805</item>
+        <item>000000016090000000204070003071006050042901860050200130600010409000000080480000000</item>
+        <item>079325000300000000080601070060009400910050028003100050030907040000000007000214560</item>
+        <item>007800060020001007510000403000406008000135000700208000203000059600300080040007200</item>
+        <item>000861002000000015090002006000054003368000574200380000400900050670000000900428000</item>
+        <item>036005080040001002700609100400002300000010000001800004007108009500700020090200570</item>
+        <item>600100800950030000000694007401000500038060920006000704100386000000040098007009003</item>
+    </string-array>
+    <string-array name="sudoku_puzzle_hard">
+        <item>092006000700000200600100700840009010000584000020700068008007009009000007000200130</item>
+        <item>160004709205103000040000000001002090700000002080900300000000010000401506507800024</item>
+        <item>060010025009000004040030008006400000001687200000002900600020070700000800980070010</item>
+        <item>007000600900300010060041070030720000040000060000013020020190030050007006008000200</item>
+        <item>000890700100000068000201000007900650009000300083002100000307000320000005001064000</item>
+        <item>035060007000508000000009580000200064200000009460003000012900000000105000700040230</item>
+        <item>000506004000024000000000829001600503050208010603001900264000000000740000100302000</item>
+        <item>000902000000003520075080004000700018300000005810005000400010970069300000000609000</item>
+        <item>000753001100002000029084000040000180200000007096000030000420710000600004500397000</item>
+        <item>090046030200000000000150007389400005004000900500009748100028000000000001060910070</item>
+    </string-array>
+    <string-array name="sudoku_puzzle_master">
+        <item>002056001900000040001030000070004002080010030600200070000020500010000007300890400</item>
+        <item>042000076000030000000007315009100003070000050500008200827400000000080000430000120</item>
+        <item>420009003000050000950000800700001000006428900000700004002000031000060000300100097</item>
+        <item>003560070200073000005008000080000105009000600406000020000200700000930006020056800</item>
+        <item>300047950000000000000105064050030806000000000901080020140508000000000000082610007</item>
+        <item>000000001000509483000010090000003708030102060104800000050060000921408000300000000</item>
+        <item>502070000600005090000009070000020600016000930003040000070500000020100008000090407</item>
+        <item>002004100030002000040300005010600050009050300020007010600001040000800030008200700</item>
+        <item>009700000050000870000003062005074000010060090000980200490800000038000010000007500</item>
+        <item>000000000650700900093002500000500001020183050300006000004300670007001043000000000</item>
+    </string-array>
+</resources>
